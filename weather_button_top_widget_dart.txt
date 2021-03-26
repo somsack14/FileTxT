@@ -1,0 +1,26 @@
+import 'package:flutter/material.dart';
+
+
+class ButtonTop extends StatelessWidget {
+
+  String weekButton;
+  int numberButton;
+  Color colorWeek;
+  Color colorNumber;
+
+    ButtonTop(this.weekButton,this.numberButton,this.colorWeek,this.colorNumber);
+
+  @override
+  Widget build(BuildContext context) {
+
+    return Container(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: <Widget>[
+          Text(weekButton,style: TextStyle(fontWeight: FontWeight.bold,color: colorWeek,),),
+          Text(numberButton.toString(),style: TextStyle(color: colorNumber),),
+        ],
+      ),
+    );
+  }
+}
