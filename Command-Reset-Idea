@@ -1,0 +1,20 @@
+# Close IntelliJ IDEA if it is running
+killall -9 "IntelliJ IDEA"
+
+# Remove the eval directory
+rm -rf ~/Library/Preferences/IntelliJIdea2021.2/eval
+rm -rf ~/Library/Application\ Support/JetBrains/IntelliJIdea2021.2/eval
+
+# Remove any evaluation related files in the options directory
+sed -i '' '/evlsprt/d' ~/Library/Preferences/IntelliJIdea2021.2/options/other.xml
+sed -i '' '/evlsprt/d' ~/Library/Application\ Support/JetBrains/IntelliJIdea2021.2/options/other.xml
+
+# Remove any JetBrains plist files
+rm -f ~/Library/Preferences/com.jetbrains.*.plist
+rm -f ~/Library/Preferences/jetbrains.*.*.plist
+
+# Flush the preference cache
+killall cfprefsd
+
+# Restart IntelliJ IDEA
+open -a "IntelliJ IDEA"
