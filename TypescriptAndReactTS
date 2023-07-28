@@ -1,0 +1,13 @@
+#CREATE PROJECT REACT TS --->
+npm create vite@latest name-project -- --template react-ts
+npm install --global yarn
+yarn
+
+#CHANGE CODE AND RUN --->
+package.json "dev -> start": "vite"
+yarn start 
+
+#INSTALL TAILWIND CSS
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+
