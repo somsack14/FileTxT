@@ -11,3 +11,5 @@ yarn start
 npm install -D tailwindcss postcss autoprefixer
 npx tailwindcss init -p
 
+#INSTALL Reducx Toolkit
+yarn add @reduxjs/toolkit
